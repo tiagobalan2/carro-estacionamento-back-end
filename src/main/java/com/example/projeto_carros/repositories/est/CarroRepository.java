@@ -1,6 +1,6 @@
-package com.example.projeto_carros.repositories;
+package com.example.projeto_carros.repositories.est;
 
-import com.example.projeto_carros.domain.Carro;
+import com.example.projeto_carros.domain.est.Carro;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

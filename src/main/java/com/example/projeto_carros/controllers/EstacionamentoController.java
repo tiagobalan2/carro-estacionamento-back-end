@@ -1,8 +1,9 @@
 package com.example.projeto_carros.controllers;
 
-import com.example.projeto_carros.domain.Estacionamento;
-import com.example.projeto_carros.dto.EstacionamentoResponseDTO;
-import com.example.projeto_carros.repositories.EstacionamentoRepository;
+
+import com.example.projeto_carros.domain.est.Estacionamento;
+import com.example.projeto_carros.dto.est.EstacionamentoResponseDTO;
+import com.example.projeto_carros.repositories.est.EstacionamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

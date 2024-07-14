@@ -1,4 +1,4 @@
-package com.example.projeto_carros.dto;
+package com.example.projeto_carros.dto.est;
 
 import lombok.Data;
 import lombok.Getter;

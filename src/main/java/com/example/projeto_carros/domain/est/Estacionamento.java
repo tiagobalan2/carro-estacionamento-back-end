@@ -1,4 +1,4 @@
-package com.example.projeto_carros.domain;
+package com.example.projeto_carros.domain.est;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

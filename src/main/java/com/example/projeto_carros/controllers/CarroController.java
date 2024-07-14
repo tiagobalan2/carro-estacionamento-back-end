@@ -1,10 +1,11 @@
 package com.example.projeto_carros.controllers;
 
-import com.example.projeto_carros.domain.Carro;
-import com.example.projeto_carros.domain.Estacionamento;
-import com.example.projeto_carros.dto.CarroRequestDTO;
-import com.example.projeto_carros.repositories.CarroRepository;
-import com.example.projeto_carros.repositories.EstacionamentoRepository;
+
+import com.example.projeto_carros.domain.est.Carro;
+import com.example.projeto_carros.domain.est.Estacionamento;
+import com.example.projeto_carros.dto.est.CarroRequestDTO;
+import com.example.projeto_carros.repositories.est.CarroRepository;
+import com.example.projeto_carros.repositories.est.EstacionamentoRepository;
 import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
