@@ -22,32 +22,30 @@ public class TokenService {
         try {
             Algorithm algorithm = Algorithm.HMAC256(secret);
             String token = JWT.create()
-                    .withIssuer("auth-api-carro")
+                    .withIssuer("api-carros-estacionamentos")
                     .withSubject(user.getLogin())
-                    .withExpiresAt(expirationDate())
+                    .withExpiresAt(expirationTokenData())
                     .sign(algorithm);
             return token;
         } catch (JWTCreationException exception) {
-            throw new RuntimeException("Error while generating token", exception);
+            throw new RuntimeException("error while generating token", exception);
         }
     }
 
-    public String validateToken(String token){
+    public String validateToken(String token) {
         try {
-            Algorithm algorithm = Algorithm.HMAC256(secret);
-            return JWT.require(algorithm)
-                    .withIssuer("auth-api")
-                    .build()
-                    .verify(token)
-                    .getSubject();
-        } catch (JWTVerificationException exception){
+        Algorithm algorithm = Algorithm.HMAC256(secret);
+        return JWT.require(algorithm)
+                .withIssuer("api-carros-estacionamentos")
+                .build()
+                .verify(token)
+                .getSubject();
+        } catch (JWTVerificationException exception) {
             return "";
         }
     }
 
-    private Instant expirationDate() {
+    private Instant expirationTokenData() {
         return LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00"));
     }
-
 }
-
